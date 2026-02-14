@@ -392,14 +392,6 @@ section {
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px) {
-
-  .edu-cert-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
 
 /* ================= FOOTER ================= */
 
@@ -412,13 +404,19 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
+/* ================= FINAL RESPONSIVE FIX ================= */
 
 @media (max-width: 900px) {
 
-  .home-container,
-  .about-container {
-    flex-direction: column;
+  section {
+    padding: 70px 6%;
+  }
+
+  /* Home */
+  .home-container {
+    flex-direction: column-reverse;
     text-align: center;
+    gap: 40px;
   }
 
   .home-text h1 {
@@ -426,8 +424,57 @@ footer {
   }
 
   .home-image img {
-    width: 240px;
+    width: 220px;
   }
+
+  /* About */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  /* Education */
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  section {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-btn {
+    width: 100%;
+    text-align: center;
+  }
+
 }
 
 </style>
@@ -514,7 +561,8 @@ footer {
 
 <section id="skills" class="skills">
 
-  <div class="skills-container">
+  <div class="container">
+
 
     <h2 class="section-title">Skills</h2>
 
@@ -549,8 +597,8 @@ footer {
 </section>
 
 <section id="projects" class="projects">
+   <div class="container">
 
-  <div class="projects-container">
 
     <h2 class="section-title">Projects</h2>
 
