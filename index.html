@@ -390,8 +390,6 @@ section {
   background: #4338ca;
 }
 
-/* ================= RESPONSIVE ================= */
-
 
 /* ================= FOOTER ================= */
 
@@ -403,7 +401,6 @@ footer {
   font-size: 14px;
 }
 
-/* ================= RESPONSIVE ================= */
 /* ================= FINAL RESPONSIVE FIX ================= */
 
 @media (max-width: 900px) {
@@ -452,6 +449,34 @@ footer {
   .contact-form {
     padding: 30px;
   }
+
+  /* ===== Mobile Navbar Fix ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+    white-space: nowrap;   /* prevents breaking into 2 lines */
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
 
 }
 
