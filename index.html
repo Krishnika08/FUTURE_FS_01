@@ -1,779 +1,1764 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="description" content="Krishnika D - B.Sc Computer Science student and aspiring frontend developer specializing in HTML, CSS, and responsive web design.">
-
-<meta name="keywords" content="Krishnika D, Frontend Developer, Portfolio, HTML, CSS, Web Developer, Tirupur">
-
-<meta name="author" content="Krishnika D">
-
-<meta property="og:title" content="Krishnika D | Portfolio">
-<meta property="og:description" content="Aspiring Frontend Developer passionate about building user-friendly digital experiences.">
-<meta property="og:type" content="website">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Krishnika D | Portfolio</title>
+  <title>Krishnika D | Frontend Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Krishnika D – Aspiring Frontend Developer skilled in HTML, CSS, Bootstrap and Python.">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* ================= GLOBAL ================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f4f6fb;
-  color: #1f2937;
-  scroll-behavior: smooth;
-  line-height: 1.6;
-}
-
-section {
-  padding: 100px 8%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 600;
-  margin-bottom: 60px;
-  color: #111827;
-}
-
-/* ================= NAVBAR ================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 8%;
-  background: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 22px;
-  color: #4f46e5;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 35px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #4b5563;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #4f46e5;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #4f46e5;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* ================= HOME ================= */
-
-.home {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-}
-
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 70px;
-}
-
-.home-text h1 {
-  font-size: 52px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.home-text h3 {
-  font-size: 20px;
-  font-weight: 500;
-  color: #4f46e5;
-  margin-bottom: 20px;
-}
-
-.home-text p {
-  margin-bottom: 30px;
-  max-width: 520px;
-  color: #6b7280;
-}
-
-.resume-btn {
-  padding: 14px 32px;
-  background: #4f46e5;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  box-shadow: 0 10px 25px rgba(79,70,229,0.25);
-}
-
-.resume-btn:hover {
-  background: #4338ca;
-  transform: translateY(-3px);
-}
-
-.home-image img {
-  width: 300px;
-  border-radius: 16px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-}
-
-/* ================= ABOUT ================= */
-
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-}
-
-.about-content {
-  flex: 1;
-}
-
-.about-content h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  color: #6b7280;
-  margin-bottom: 15px;
-}
-
-.about-image img {
-  width: 260px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.07);
-}
-
-/* ================= SKILLS ================= */
-
-.skills {
-  background: #ffffff;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-}
-
-.skill-card {
-  background: #f9fafb;
-  padding: 22px;
-  text-align: center;
-  border-radius: 12px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  border: 1px solid #e5e7eb;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  background: #4f46e5;
-  color: #fff;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
-}
-
-.project-card {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  transition: 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.project-card h3 {
-  margin-bottom: 15px;
-  color: #111827;
-}
-
-.project-card p {
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 20px;
-}
-
-.tech-stack {
-  font-size: 13px;
-  font-weight: 500;
-  color: #4f46e5;
-  margin-bottom: 20px;
-}
-
-.project-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.project-btn {
-  padding: 8px 18px;
-  background: #4f46e5;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 13px;
-  transition: 0.3s ease;
-}
-
-.project-btn:hover {
-  background: #4338ca;
-}
-
-/* ================= EDUCATION & CERTIFICATIONS ================= */
-
-.education-section {
-  padding: 100px 8%;
-  background: #ffffff;
-}
-
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
-  margin-top: 50px;
-}
-
-.education-card {
-  background: #f9fafb;
-  padding: 35px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  transition: 0.3s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-}
-
-.education-card h3 {
-  margin-bottom: 12px;
-  color: #111827;
-  font-size: 18px;
-}
-
-.edu-institution {
-  font-weight: 500;
-  color: #4f46e5;
-  margin-bottom: 8px;
-}
-
-.edu-details {
-  font-size: 14px;
-  color: #6b7280;
-}
-
-.cert-list {
-  padding-left: 18px;
-  line-height: 1.8;
-  color: #6b7280;
-  font-size: 14px;
-}
-
-
-/* ================= CONTACT ================= */
-
-.contact {
-  padding: 100px 8%;
-  background: #f4f6fb;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 50px;
-}
-
-.contact-info {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-}
-
-.contact-info h3 {
-  margin-bottom: 25px;
-}
-
-.contact-info p {
-  margin-bottom: 20px;
-  color: #6b7280;
-}
-
-.contact-form {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #4f46e5;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
-}
-
-.contact-form button {
-  padding: 14px;
-  background: #4f46e5;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #4338ca;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #111827;
-  color: #fff;
-  font-size: 14px;
-}
-
-/* ================= FINAL RESPONSIVE FIX ================= */
-
-@media (max-width: 900px) {
-
-  section {
-    padding: 70px 6%;
-  }
-
-  /* Home */
-  .home-container {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .home-text h1 {
-    font-size: 36px;
-  }
-
-  .home-image img {
-    width: 220px;
-  }
-
-  /* About */
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .about-image img {
-    width: 220px;
-  }
-
-  /* Education */
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Contact */
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info,
-  .contact-form {
-    padding: 30px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 18px 5%;
-  }
-
-  .logo {
-    font-size: 20px;
-    white-space: nowrap;
-  }
-
-  .nav-links {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-
-  section {
-    padding: 60px 5%;
-  }
-
-  .section-title {
-    font-size: 26px;
-  }
-
-  .project-buttons {
-    flex-direction: column;
-  }
-
-  .project-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-}
-
-</style>
-
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    /* ───────────────────────────────────────────────
+   RESET & VARIABLES
+──────────────────────────────────────────────── */
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --primary-glow: rgba(79, 70, 229, 0.18);
+      --accent: #818cf8;
+      --bg: #f8f9ff;
+      --bg2: #ffffff;
+      --surface: #f1f2fc;
+      --border: #e5e7eb;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --text-light: #9ca3af;
+      --dark: #0f172a;
+      --radius: 14px;
+      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.09);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 99px;
+    }
+
+    /* ───────────────────────────────────────────────
+   UTILITY
+──────────────────────────────────────────────── */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: var(--primary-glow);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 500px;
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      text-align: center;
+    }
+
+    .section-header .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Scroll-reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ───────────────────────────────────────────────
+   NAVBAR
+──────────────────────────────────────────────── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--transition);
+    }
+
+    .navbar.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: var(--primary-glow);
+    }
+
+    .nav-cta {
+      background: var(--primary) !important;
+      color: #fff !important;
+      border-radius: 8px !important;
+      padding: 8px 20px !important;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+      transform: translateY(-1px);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .mobile-nav a:hover {
+      background: var(--surface);
+      color: var(--primary);
+    }
+
+    /* ───────────────────────────────────────────────
+   HERO
+──────────────────────────────────────────────── */
+    .hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f9ff 0%, #eef0ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
+      top: -150px;
+      right: -150px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-greeting {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .hero-text h1 .gradient-text {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-role {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all var(--transition);
+      box-shadow: 0 8px 24px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px var(--primary-glow);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 2px solid var(--primary);
+      transition: all var(--transition);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 20px;
+      transition: all var(--transition);
+      background: var(--bg2);
+    }
+
+    .social-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-image {
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .hero-image img {
+      width: 320px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stats {
+      position: absolute;
+      bottom: -20px;
+      left: -24px;
+      background: var(--bg2);
+      border-radius: 14px;
+      padding: 14px 20px;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+      border: 1px solid var(--border);
+    }
+
+    .hero-stats span {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero-stats small {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ───────────────────────────────────────────────
+   ABOUT
+──────────────────────────────────────────────── */
+    .about {
+      background: var(--bg2);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: 24px;
+      right: -20px;
+      background: var(--bg2);
+      border-radius: 14px;
+      padding: 14px 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .about-img-badge .badge-icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .about-img-badge span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .about-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      transition: all var(--transition);
+    }
+
+    .pill:hover {
+      background: var(--primary-glow);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .pill i {
+      color: var(--primary);
+      font-size: 16px;
+    }
+
+    /* ───────────────────────────────────────────────
+   SKILLS
+──────────────────────────────────────────────── */
+    .skills {
+      background: var(--bg);
+    }
+
+    .skills-groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .skills-group-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition);
+    }
+
+    .skills-group-box:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .skills-group-box h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-group-box h3 i {
+      color: var(--primary);
+      font-size: 22px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all var(--transition);
+      cursor: default;
+    }
+
+    .skill-tag:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    /* ───────────────────────────────────────────────
+   PROJECTS
+──────────────────────────────────────────────── */
+    .projects {
+      background: var(--bg2);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .project-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      padding: 30px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .project-header h3 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .project-body {
+      padding: 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-body p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex: 1;
+      line-height: 1.7;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .tech-tag {
+      background: var(--primary-glow);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .project-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .proj-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .proj-btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .proj-btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .proj-btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+
+    .proj-btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ───────────────────────────────────────────────
+   EDUCATION
+──────────────────────────────────────────────── */
+    .education {
+      background: var(--bg);
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .edu-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 34px;
+      transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .edu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .edu-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .edu-icon {
+      width: 46px;
+      height: 46px;
+      background: var(--primary-glow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .edu-card-header h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .edu-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .edu-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+
+    .edu-entry {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--surface);
+    }
+
+    .edu-entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .edu-entry .degree {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .edu-entry .institution {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .edu-entry .period {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cert-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .cert-list li i {
+      color: var(--primary);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ───────────────────────────────────────────────
+   CONTACT
+──────────────────────────────────────────────── */
+    .contact {
+      background: var(--bg2);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-left h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-left p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-item:hover {
+      border-color: var(--primary);
+      background: var(--primary-glow);
+      transform: translateX(4px);
+    }
+
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary-glow);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .contact-item-text small {
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text strong {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      padding: 13px 16px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background: var(--bg2);
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      resize: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 4px var(--primary-glow);
+    }
+
+    .contact-form button {
+      padding: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px var(--primary-glow);
+    }
+
+    .contact-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px var(--primary-glow);
+    }
+
+    /* ───────────────────────────────────────────────
+   FOOTER
+──────────────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 60px 0 30px;
+    }
+
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .footer-brand .logo {
+      color: var(--accent);
+      font-size: 24px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      max-width: 260px;
+      line-height: 1.7;
+    }
+
+    .footer-links h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #94a3b8;
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-social h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 19px;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom span {
+      color: #e2e8f0;
+    }
+
+    /* ───────────────────────────────────────────────
+   BACK TO TOP
+──────────────────────────────────────────────── */
+    #back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 46px;
+      height: 46px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px var(--primary-glow);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all var(--transition);
+      z-index: 999;
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ───────────────────────────────────────────────
+   RESPONSIVE
+──────────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-text h1 {
+        font-size: 38px;
+      }
+
+      .hero-actions,
+      .social-links {
+        justify-content: center;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-image img {
+        width: 240px;
+        height: 280px;
+      }
+
+      .hero-stats {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+      }
+
+      .hero-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img-wrap {
+        text-align: center;
+      }
+
+      .about-img-wrap img {
+        max-width: 260px;
+      }
+
+      .about-img-badge {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .skills-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .contact-form {
+        padding: 24px;
+      }
+
+      .project-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
-<header>
-  <nav class="navbar">
-    <h2 class="logo">Krishnika D</h2>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section id="home" class="home">
-  
-  <div class="home-container">
-
-    <div class="home-text">
-      <h1>Krishnika D</h1>
-      <h3>B.Sc Computer Science </h3>
-      <p>Aspiring Frontend Developer passionate about building user-friendly digital experiences.</p>
-      
-      <a href="resume.pdf" download class="resume-btn">
-        Download Resume
-      </a>
-    </div>
-
-    <div class="home-image">
-      <img src="profile.jpeg" alt="Krishnika Photo">
-    </div>
-
-  </div>
-
-</section>
-<section id="about" class="about">
-
-  <div class="about-container">
-
-    <div class="about-image">
-      <img src="profile.jpeg" alt="Krishnika D Photo">
-    </div>
-
-    <div class="about-content">
-      <h2>About Me</h2>
-
-      <p>
-        I am <strong>Krishnika D</strong>, currently pursuing a 
-        <strong>B.Sc. in Computer Science</strong> at A.V.P. College of Arts and Science. 
-        I have a strong interest in frontend development and enjoy creating 
-        visually appealing and user-friendly websites.
-      </p>
-
-      <p>
-        To enhance my skills, I actively build sample websites using HTML and CSS, 
-        continuously improving my understanding of web design and development.
-      </p>
-
-      <p>
-        My short-term goal is to secure a position in the IT sector where I can 
-        showcase my skills and knowledge. My long-term goal is to grow into a 
-        leadership role within my desired career path and contribute meaningfully 
-        to organizational success.
-      </p>
-
-      <div class="about-info">
-        <div><strong>🎓 Degree:</strong> B.Sc Computer Science</div>
-        <div><strong>💻 Interest:</strong> Frontend Development</div>
-        <div><strong>🎯 Goal:</strong> IT Professional & Future Leader</div>
+  <!-- ===================== NAVBAR ===================== -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="logo">Krishnika<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="skills" class="skills">
-
-  <div class="container">
-
-
-    <h2 class="section-title">Skills</h2>
-
-    <!-- Technical Skills -->
-    <div class="skills-group">
-      <h3>Technical Skills</h3>
-
-      <div class="skills-grid">
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">Bootstrap</div>
-        <div class="skill-card">GitHub (Basic)</div>
-        <div class="skill-card">Python</div>
-        <div class="skill-card">Java (Basic)</div>
-      </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <div class="skills-group">
-      <h3>Soft Skills</h3>
-
-      <div class="skills-grid">
-        <div class="skill-card">Communication</div>
-        <div class="skill-card">Teamwork</div>
-        <div class="skill-card">Resilience</div>
-        <div class="skill-card">Problem Solving</div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="projects" class="projects">
-   <div class="container">
-
-
-    <h2 class="section-title">Projects</h2>
-
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3>Personal Digital Portfolio Website</h3>
-        <p>
-          Designed and developed a responsive personal portfolio website 
-          using HTML, CSS, and Bootstrap. The website showcases my skills, 
-          projects, and professional profile with a clean and structured layout.
-        </p>
-        <div class="tech-stack">
-          HTML | CSS | Bootstrap
-        </div>
-        <div class="project-buttons">
-          <a href="https://pramila-d.github.io/Digital_portfolio/" 
-             target="_blank" 
-             class="project-btn">Live Demo</a>
-
-          <a href="#" target="_blank" class="project-btn outline-btn">GitHub</a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3>Online Skincare Shopping Website</h3>
-        <p>
-          Developed a multi-page e-commerce skincare website including 
-          Home, Product, Login, Signup, and User Profile pages. 
-          Focused on responsive design and user-friendly navigation.
-        </p>
-        <div class="tech-stack">
-          HTML | CSS | Bootstrap
-        </div>
-        <div class="project-buttons">
-          <a href="https://krishnika08.github.io/product-website/" 
-             target="_blank" 
-             class="project-btn">Live Demo</a>
-
-          <a href="#" target="_blank" class="project-btn outline-btn">GitHub</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-      <!-- ================= EDUCATION & CERTIFICATIONS ================= -->
-
-<section class="education-section">
-
-  <div class="container">
-
-    <h2 class="section-title">Education & Achievements</h2>
-
-    <div class="education-grid">
-
-      <!-- College Education -->
-      <div class="education-card">
-        <h3>Bachelor of Science in Computer Science</h3>
-        <p class="edu-institution">A.V.P College of Arts and Science</p>
-        <p class="edu-details">2023 – 2026 | Pursuing – VI Semester</p><br>
-        <h3>Higher Secondary Education</h3>
-        <p class="edu-institution">Government Higher Secondary School, Tirupur</p>
-        <p class="edu-details">2022 – 2023 | Percentage: 80.6%</p>
-      </div>
-
-
-      <!-- Certifications -->
-      <div class="education-card">
-        <h3>Certifications & Achievements</h3>
-        <ul class="cert-list">
-          <li>Certificate of Appreciation – NAAC Peer Team Visit (June 2024)</li>
-          <li>Completed HTML, CSS & Bootstrap Course – KGISL Institution</li>
-          <li>Hackathon for Women in Science & Engineering – TANCAM & KIT</li>
-          <li>Second Prize – Web Designing Competition</li>
+      <div class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </nav>
+  </header>
 
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-text reveal">
+          <div class="hero-greeting">
+            <i class='bx bx-wave'></i> Hello, I'm
+          </div>
+          <h1>
+            <span class="gradient-text">Krishnika D</span>
+          </h1>
+          <p class="hero-role">Aspiring Frontend Developer &amp; B.Sc Computer Science Student</p>
+          <p class="hero-desc">
+            Passionate about crafting pixel-perfect, user-friendly digital experiences.
+            I turn ideas into elegant, responsive websites.
+          </p>
+          <div class="hero-actions">
+            <a href="resume.pdf" download class="btn-primary">
+              <i class='bx bx-download'></i> Download Resume
+            </a>
+            <a href="#projects" class="btn-outline">
+              <i class='bx bx-folder-open'></i> View Projects
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://krishnika08.github.io/FUTURE_FS_01/" target="_blank" class="social-link" title="Portfolio">
+              <i class='bx bx-globe'></i>
+            </a>
+            <a href="mailto:luvlygurldk@gmail.com" class="social-link" title="Email">
+              <i class='bx bx-envelope'></i>
+            </a>
+            <a href="tel:9944664341" class="social-link" title="Phone">
+              <i class='bx bx-phone'></i>
+            </a>
+            <a href="#" target="_blank" class="social-link" title="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="#" target="_blank" class="social-link" title="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image reveal">
+          <img src="profile.jpeg" alt="Krishnika D – Frontend Developer">
+          <div class="hero-stats">
+            <span>2+</span>
+            <small>Projects Completed</small>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-inner">
 
-</section>
+        <div class="about-img-wrap reveal">
+          <img src="profile.jpeg" alt="Krishnika D">
+          <div class="about-img-badge">
+            <span class="badge-icon">🎯</span>
+            <span>IT Enthusiast</span>
+          </div>
+        </div>
 
+        <div class="about-content reveal">
+          <span class="section-badge">About Me</span>
+          <h2 class="section-title">Passionate About Creating<br>Digital Experiences</h2>
+          <p>
+            I am <strong>Krishnika D</strong>, currently pursuing a
+            <strong>B.Sc. in Computer Science</strong> at A.V.P. College of Arts and Science (VI Semester).
+            I have a strong passion for frontend development and enjoy building visually
+            appealing, user-friendly websites.
+          </p>
+          <p>
+            I actively develop sample websites using HTML, CSS, and Bootstrap to continuously
+            strengthen my understanding of web design. My goal is to secure a role in the IT sector
+            where I can grow into a leadership position and make a meaningful impact.
+          </p>
 
+          <div class="about-pills">
+            <span class="pill"><i class='bx bx-graduation'></i> B.Sc Computer Science</span>
+            <span class="pill"><i class='bx bx-code-alt'></i> Frontend Development</span>
+            <span class="pill"><i class='bx bx-map'></i> Tirupur, Tamil Nadu</span>
+            <span class="pill"><i class='bx bx-target-lock'></i> IT Professional &amp; Leader</span>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
 
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-  <div class="container">
-
-    <h2 class="section-title">Get In Touch</h2>
-
-    <div class="contact-grid">
-
-      <!-- Left Side -->
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <p><strong>Email:</strong><br> luvlygurldk@gmail.com</p>
-        <p><strong>Phone:</strong><br> 9944664341</p>
-        <p><strong>Location:</strong><br> Tirupur, Tamil Nadu</p>
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Expertise</span>
+        <h2 class="section-title">Skills &amp; Abilities</h2>
+        <p class="section-sub">A blend of technical proficiency and interpersonal strengths that I bring to every
+          project.</p>
       </div>
 
-      <!-- Right Side -->
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <div class="skills-groups reveal">
+        <div class="skills-group-box">
+          <h3><i class='bx bx-code-curly'></i> Technical Skills</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java (Basic)</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
 
+        <div class="skills-group-box">
+          <h3><i class='bx bx-group'></i> Soft Skills</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Teamwork</span>
+            <span class="skill-tag">Resilience</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Time Management</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Attention to Detail</span>
+            <span class="skill-tag">Leadership</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">A selection of real projects I've designed and built from scratch.</p>
+      </div>
 
-</section>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script>
-  (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); 
-  })();
+      <div class="projects-grid">
 
-  document.querySelector(".contact-form").addEventListener("submit", function(e) {
-      e.preventDefault();
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class='bx bx-user-circle'></i></div>
+            <h3>Personal Digital Portfolio Website</h3>
+          </div>
+          <div class="project-body">
+            <p>
+              Designed and developed a fully responsive personal portfolio website
+              showcasing skills, projects, and professional profile with a clean, structured layout.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://krishnika08.github.io/FUTURE_FS_01/" target="_blank" class="proj-btn proj-btn-primary">
+                <i class='bx bx-link-external'></i> Live Demo
+              </a>
+              <a href="#" target="_blank" class="proj-btn proj-btn-outline">
+                <i class='bx bxl-github'></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
 
-      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-        .then(function() {
-            alert("Message Sent Successfully!");
-        }, function(error) {
-            alert("Failed to send message.");
-        });
-  });
-</script>
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class='bx bx-shopping-bag'></i></div>
+            <h3>Online Skincare Shopping Website</h3>
+          </div>
+          <div class="project-body">
+            <p>
+              A multi-page e-commerce skincare website comprising Home, Product, Login,
+              Signup, and User Profile pages — focused on responsive design and intuitive navigation.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-buttons">
+              <a href="https://krishnika08.github.io/product-website/" target="_blank"
+                class="proj-btn proj-btn-primary">
+                <i class='bx bx-link-external'></i> Live Demo
+              </a>
+              <a href="#" target="_blank" class="proj-btn proj-btn-outline">
+                <i class='bx bxl-github'></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Background</span>
+        <h2 class="section-title">Education &amp; Achievements</h2>
+        <p class="section-sub">Academic qualifications and notable certifications that shape my foundation.</p>
+      </div>
+
+      <div class="edu-grid">
+
+        <!-- Education -->
+        <div class="edu-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-icon"><i class='bx bx-book-open'></i></div>
+            <div>
+              <h3>Academic Education</h3>
+              <p class="edu-meta">Formal qualifications</p>
+            </div>
+          </div>
+          <div class="edu-entry">
+            <p class="degree">Bachelor of Science in Computer Science</p>
+            <p class="institution">A.V.P College of Arts and Science</p>
+            <p class="period">2023 – 2026 · Pursuing – VI Semester</p>
+          </div>
+          <div class="edu-entry">
+            <p class="degree">Higher Secondary Education (12th Grade)</p>
+            <p class="institution">Government Higher Secondary School, Tirupur</p>
+            <p class="period">2022 – 2023 · Percentage: 80.6%</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="edu-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-icon"><i class='bx bx-award'></i></div>
+            <div>
+              <h3>Certifications &amp; Achievements</h3>
+              <p class="edu-meta">Awards &amp; recognition</p>
+            </div>
+          </div>
+          <ul class="cert-list">
+            <li>
+              <i class='bx bx-badge-check'></i>
+              Certificate of Appreciation – NAAC Peer Team Visit (June 2024)
+            </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              Completed HTML, CSS &amp; Bootstrap Course – KGISL Institution
+            </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              Hackathon for Women in Science &amp; Engineering – TANCAM &amp; KIT
+            </li>
+            <li>
+              <i class='bx bx-badge-check'></i>
+              🥈 Second Prize – Web Designing Competition
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub">I'm open to opportunities and collaborations. Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-left reveal">
+          <h3>Let's Work Together</h3>
+          <p>Whether you have a project in mind, a question, or just want to say hello — I'd love to hear from you.</p>
+
+          <div class="contact-items">
+            <a href="mailto:luvlygurldk@gmail.com" class="contact-item">
+              <div class="contact-item-icon"><i class='bx bx-envelope'></i></div>
+              <div class="contact-item-text">
+                <small>Email</small>
+                <strong>luvlygurldk@gmail.com</strong>
+              </div>
+            </a>
+            <a href="tel:9944664341" class="contact-item">
+              <div class="contact-item-icon"><i class='bx bx-phone'></i></div>
+              <div class="contact-item-text">
+                <small>Phone</small>
+                <strong>+91 99446 64341</strong>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class='bx bx-map'></i></div>
+              <div class="contact-item-text">
+                <small>Location</small>
+                <strong>Tirupur, Tamil Nadu, India</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="e.g. Rajan Kumar" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about your project or query..." required></textarea>
+          </div>
+          <button type="submit">
+            <i class='bx bx-send'></i> Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Krishnika<span style="color:#fff">.</span></a>
+          <p>Aspiring Frontend Developer building elegant, user-friendly web experiences. Open to internships and
+            collaborations.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-socials">
+            <a href="mailto:luvlygurldk@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+            <a href="https://krishnika08.github.io/FUTURE_FS_01/" target="_blank" title="Portfolio"><i
+                class='bx bx-globe'></i></a>
+            <a href="#" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Krishnika D</span> · Designed &amp; Developed with ❤️ in Tamil Nadu, India
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button id="back-to-top" title="Back to top">
+    <i class='bx bx-chevron-up'></i>
+  </button>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // ── Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    // ── Navbar Scroll Shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+      backToTop.classList.toggle('show', window.scrollY > 400);
+    });
+
+    // ── Active Nav Link on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+
+    // ── Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // ── Back to Top
+    const backToTop = document.getElementById('back-to-top');
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 
 </body>
+
 </html>
